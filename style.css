@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.page.centered {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.page.centered.active {
+  display: flex;
+}
+
+input {
+  margin: 10px 0;
+  padding: 8px;
+  width: 250px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  max-width: 90%;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#btnGreen {
+  background-color: lightgreen;
+  color: black;
+}
+
+#btnRed {
+  background-color: red;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#mainButton {
+  background-color: gold;
+}
+
+#resetButton {
+  background-color: darkred;
+  color: white;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+#overlayText {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  max-width: 80%;
+  word-wrap: break-word;
+  white-space: pre-line;
+}

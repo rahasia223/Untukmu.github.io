@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk 24.25.049.049</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Overlay -->
+  <div id="overlay">
+    <div id="overlayText"></div>
+  </div>
+
+  <!-- Halaman 1 -->
+  <div class="page active centered" id="page1" style="background-image: url('login.jpg');">
+    <h3 style="color: black;">Hai, boleh tau nama lengkap dan tanggal lahir mu?</h3>
+    <input type="text" id="input1" placeholder="Nama lengkap" oninput="toLower(this)">
+    <input type="text" id="input2" placeholder="Tanggal lahir" oninput="toLower(this)">
+    <button onclick="checkPasswords()">Buka Pesanku</button>
+    <p id="errorText" style="color:red;"></p>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div class="page centered" id="page2">
+    <h3>Baca pelan-pelan ya, Rina cantik.</h3>
+    <button onclick="gotoPage(3)">Iya</button>
+  </div>
+
+  <!-- Halaman 3 -->
+  <div class="page centered" id="page3">
+    <h1>Hai sayang, eh hai cantik, atau sayang ya?</h1>
+    <h3>lupakan itu</h3>
+    <p>Rina, aku sangat menyukaimu sejak lama. Maaf ya baru sekarang aku bisa jujur. Kamu mungkin belum tahu ini dari siapa, tapi semoga kamu bisa rasakan ketulusannya.</p>
+    <button id="mainButton" onclick="showChoices()">Ciri-ciri aku</button>
+    <div id="resultText"></div>
+    <p id="countdownText"></p>
+    <button id="btnGreen" onclick="choose('green')" disabled>Iya</button>
+    <button id="btnRed" onclick="choose('red')" disabled>Tidak</button>
+    <br><br>
+    <input type="password" id="resetInput" placeholder="Password reset">
+    <button id="resetButton" onclick="attemptReset()">Reset Halaman</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
